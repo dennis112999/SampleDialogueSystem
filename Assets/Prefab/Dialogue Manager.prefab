@@ -984,7 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1636750825111984457}
-  _animationType: 1
+  _animationType: 0
 --- !u!1 &4418096226132843548
 GameObject:
   m_ObjectHideFlags: 0
