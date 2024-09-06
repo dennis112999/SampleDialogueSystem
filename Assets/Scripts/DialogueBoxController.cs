@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using Dialogue.Sample;
 
 namespace Dialogue
 {
@@ -75,6 +76,7 @@ namespace Dialogue
             for (int i = 0; i < dialogueTree.sections[section].dialogue.Length; i++)
             {
                 dialogueText.text = dialogueTree.sections[section].dialogue[i];
+                dialogueText.GetComponent<TextAnimation>().StartAnimation();
 
                 // Wait for the player to skip the line (usually by pressing a key or button)
                 while (!skipLineTriggered)
@@ -95,6 +97,7 @@ namespace Dialogue
             }
 
             dialogueText.text = dialogueTree.sections[section].branchPoint.question;
+            dialogueText.GetComponent<TextAnimation>().StartAnimation();
             ShowAnswers(dialogueTree.sections[section].branchPoint);
 
             // Wait for the player to select an answer
